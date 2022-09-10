@@ -70,6 +70,8 @@ ModrinthPage::ModrinthPage(NewInstanceDialog* dialog, QWidget* parent) : QWidget
     connect(ui->sortByBox, SIGNAL(currentIndexChanged(int)), this, SLOT(triggerSearch()));
     connect(ui->packView->selectionModel(), &QItemSelectionModel::currentChanged, this, &ModrinthPage::onSelectionChanged);
     connect(ui->versionSelectionBox, &QComboBox::currentTextChanged, this, &ModrinthPage::onVersionSelectionChanged);
+
+    ui->packDescription->setMetaEntry(metaEntryBase());
 }
 
 ModrinthPage::~ModrinthPage()
